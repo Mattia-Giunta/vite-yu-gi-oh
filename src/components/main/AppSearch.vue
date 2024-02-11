@@ -1,9 +1,20 @@
 <script>
 // import
+import { store } from "../../store";
 
 export default {
   name: "AppSearch",
+
+  data() {
+
+    return {
+
+      store,
+    };
+  },
 };
+
+
 
 </script>
 
@@ -13,9 +24,12 @@ export default {
   
   <div>
 
-    <select name="" id="">
+    <select v-model="store.searchText" name="" id="">
 
       <option value="" disabled hidden>Seleziona Classe</option>
+      <option value="" >Alien</option>
+      <option value="" >Eroe</option>
+      <option value="" >Robot</option>
 
     </select>
 

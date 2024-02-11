@@ -3,6 +3,18 @@
 
 export default {
   name: "CardChild",
+
+  props:[
+    'propsElement'
+  ],
+
+    data() {
+
+        return {
+
+            
+        };
+    },
 };
 
 </script>
@@ -11,14 +23,14 @@ export default {
 
 <template>
 
-<!-- v-for="(element,index) in store" :key="index" -->
+
 <div >
             
-    <img src="https://images.ygoprodeck.com/images/cards_small/34541863.jpg" alt=""> 
+    <img :src="propsElement.card_images[0].image_url_small"> 
 
-    <h3>"A" Cell Breeding Device</h3>
+    <h3>{{propsElement.name}}</h3>
 
-    <p>Alien</p>
+    <p>{{propsElement.type}}</p>
             
 </div>
   

@@ -15,7 +15,7 @@ export default {
     AppHeader,
     AppSearch,
     CardList,
-},
+  },
 
   data() {
 

@@ -15,11 +15,11 @@ export default {
 
   data() {
 
-  return {
+    return {
 
-  store,
-};
-},
+      store,
+    };
+  },
 };
 
 </script>
@@ -42,16 +42,12 @@ export default {
 
         <figure>
 
-          <CardChild/>
+          <CardChild v-for="(element,index) in store.cardList" 
+            :key="index"
+            :propsElement="element" 
+          />
 
-          <CardChild/>
-
-          <CardChild/>
-
-          <CardChild/>
-
-          <CardChild/>
-
+          
           
         </figure>
 
