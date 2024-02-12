@@ -24,13 +24,13 @@ export default {
 <template>
 
 
-<div >
+<div class="container-card">
             
     <img :src="propsElement.card_images[0].image_url_small"> 
 
     <h3>{{propsElement.name}}</h3>
 
-    <p>{{propsElement.type}}</p>
+    <p>{{ propsElement.archetype }}</p>
             
 </div>
   
@@ -49,6 +49,11 @@ div{
     width: calc(100% / 5 - 20px);
     background-color: #D48F38;
     text-align: center;
+    &:hover{box-shadow: 0px 0px 26px 6px #ccd820;}
+    
+
+
+
 
     img{
 

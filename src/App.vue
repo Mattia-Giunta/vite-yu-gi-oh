@@ -37,6 +37,14 @@ export default {
 
       store.loading = true
 
+      store.apiUrl = 'https://db.ygoprodeck.com/api/v7/cardinfo.php?num=50&offset=0';
+
+      if(store.selectValue){
+
+        store.apiUrl = `https://db.ygoprodeck.com/api/v7/cardinfo.php?archetype=${store.selectValue}`;
+
+      };
+
       axios.get(store.apiUrl)
 
        .then( response => { 
@@ -73,7 +81,7 @@ export default {
 
   <main>
 
-    <AppSearch />
+    <AppSearch @searchArch="getCard" />
 
     <CardList/>
 
@@ -91,6 +99,7 @@ export default {
 
 main{
   background-color: #D48F38;
+  
 }
 
 </style>

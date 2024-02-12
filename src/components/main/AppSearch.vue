@@ -24,12 +24,16 @@ export default {
   
   <div>
 
-    <select v-model="store.selectValue" name="" id="">
+    <select v-model="store.selectValue" @change="$emit('searchArch')" name="" id="">
 
       <option 
+
       :value="element.archetype_name"
+
       v-for="(element,index) in store.arrayArchetype"
+
       :key="index"
+      
       >{{ element.archetype_name }}</option>
       
 

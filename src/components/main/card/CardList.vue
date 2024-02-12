@@ -38,7 +38,7 @@ export default {
 
       <span class="loader" v-if=" ( store.loading ) "></span>
 
-      <div>
+      <div >
 
         <figure>
 
@@ -47,8 +47,6 @@ export default {
             :propsElement="element" 
           />
 
-          
-          
         </figure>
 
 
@@ -57,8 +55,6 @@ export default {
 
     </section>
 
-
-  <!-- <CardChild/> -->
 
 </template>
 
@@ -71,9 +67,11 @@ export default {
 section{
 
   width: 80%;
+  height: 750px;
   margin: 0 auto;
   padding: 30px;
-  background-color: white;
+  background-color: #212529;
+  overflow: auto;
 
   .count-container{
 
@@ -99,6 +97,7 @@ section{
   }
 
 }
+
 
 .loader {
   color: black;
