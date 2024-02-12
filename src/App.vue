@@ -28,6 +28,7 @@ export default {
   created() {
 
     this.getCard();
+    this.getArchetype()
   },
 
   methods: {
@@ -46,7 +47,20 @@ export default {
 
       });
     },
+
+    getArchetype() {
+
+      axios.get(store.apiUrlArchetype)
+
+       .then( response => { 
+
+        store.arrayArchetype = response.data;
+
+      });
+    },
+
   },
+
 };
 
 </script>

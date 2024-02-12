@@ -24,12 +24,14 @@ export default {
   
   <div>
 
-    <select v-model="store.searchText" name="" id="">
+    <select v-model="store.selectValue" name="" id="">
 
-      <option value="" disabled hidden>Seleziona Classe</option>
-      <option value="" >Alien</option>
-      <option value="" >Eroe</option>
-      <option value="" >Robot</option>
+      <option 
+      :value="element.archetype_name"
+      v-for="(element,index) in store.arrayArchetype"
+      :key="index"
+      >{{ element.archetype_name }}</option>
+      
 
     </select>
 

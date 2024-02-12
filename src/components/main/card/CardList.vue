@@ -32,7 +32,7 @@ export default {
 
       <div class="count-container">
 
-        <span >Found</span>
+        <span >Found {{store.cardList.length}} cards</span>
 
       </div>
 
